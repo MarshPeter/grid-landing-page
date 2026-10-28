@@ -6,7 +6,6 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/solid.css" integrity="sha512-w4p7siR+/FKStV2XlvcYnxTLYOmhPlbNfnyeBYEN4ehrDM4sil3mZj3lu7hPm1Nt4ru58vkMgzKh9nNHd1tghw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
   <title>Frontend Mentor | Grid landing page</title>
 
@@ -20,55 +19,73 @@
 
   <header class="primary-header">
     Bridge Collective
-    <i class="fa-solid fa-bars"></i>
-    <nav>
-      <!-- Menu panel — hidden until the hamburger is activated -->
-      About
-      Our Work
-      Partners
-      Annual Report
-      Donate
-    </nav>
+
+    <button id="nav-button"><img src="./assets/images/icon-menu.svg" alt=""></button>
   </header>
+  <nav id="page-nav" class="right-popup hidden">
+    <!-- Menu panel — hidden until the hamburger is activated -->
+    <a>About</a>
+    <a>Our Work</a>
+    <a>Partners</a>
+    <a>Annual Report</a>
+    <a>Donate</a>
+  </nav>
+
 
   <main class="content-wrapper">
-    <section class="hero">
-      <!-- Hero -->
-      <h1>A classroom for every child.</h1>
-    
-      <p>We fund the schools, train the teachers, and measure what works — so every child we reach today becomes a graduate tomorrow.</p>
-    </section>
+
+    <div class="content-hero">
+      <section class="hero">
+        <div>
+          <!-- Hero -->
+          <h1>A classroom for every child.</h1>
+          <p>We fund the schools, train the teachers, and measure what works — so every child we reach today becomes a graduate tomorrow.</p>
+        </div>
+      </section>
+    </div>
   
-    <div class="outreached">
-      <section class="content-item">
+    <div class="content-item">
+      <section>
         <!-- Stats -->
-        <p class="">2.4M</p>
-        <p>Students reached<p>
-        <p>Across 31 countries since 2011.</p>
+        <img class="data-point" src="./assets/images/icon-sparkle.svg" alt="A sparkle image" role="img">
+        <p class="headline-number">2.4M</p>
+        <div class="stat-information">
+          <p class="data-name">Students reached</p>
+          <p class="data-description">Across 31 countries since 2011.</p>
+        </div>
+      </section>
+    </div>
+  
+    <div class="content-item">
+      <section>
+        <img class="data-point" src="./assets/images/icon-plus.svg" alt="A plus sign" role="img">
+        <p class="headline-number">1,284</p>
+        <div class="stat-information">
+          <p class="data-name">Schools partnered</p>
+          <p class="data-description">In 14 countries, from Kenya to Guatemala.</p>
+        </div>
+      </section>
+    </div>
+  
+    <div class="content-item">
+      <section class="data-point">
+        <img class="data-logo" src="./assets/images/icon-arrow-right.svg" alt="A arrow pointing right" role="img">
+        <p class="headline-number">38K</p>
+        <div class="stat-information">
+          <p class="data-name">Teachers trained</p>
+          <p class="data-description">Equipped with modern tools and methodology.</p>
+        </div>
       </section>
     </div>
     
-    <div class="partnered">
-      <section class="content-item">
-        <p>1,284</p>
-        <p>Schools partnered</p>
-        <p>In 14 countries, from Kenya to Guatemala.</p>
-      </section>
-    </div>
-    
-    <div class="trained">
-      <section id="trained" class="content-item">
-        <p>38K</p>
-        <p>Teachers trained</p>
-        <p>Equipped with modern tools and methodology.</p>
-      </section>
-    </div>
-    
-    <div class="lifted">
-      <section id="lifted" class="content-item">
-        <p>3.1×</p>
-        <p>Graduation lift</p>
-        <p>Partner schools outperform national averages 3x.</p>
+    <div class="content-item">
+      <section>
+        <img class="data-logo" src="./assets/images/icon-trending-up.svg" alt="A arrow trending up" role="img">
+        <p class="headline-number">3.1×</p>
+        <div class="stat-information">
+          <p class="data-name">Graduation lift</p>
+          <p class="data-description">Partner schools outperform national averages 3x.</p>
+        </div>
       </section>
     </div>
   </main>
@@ -79,11 +96,9 @@
     Registered charity 12345678
   </footer>
 
+  <div class="overlay hidden"></div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
   <script src="https://kit.fontawesome.com/9615c7632a.js" crossorigin="anonymous"></script>
+  <script type="module" src="./index.js"></script>
 </body>
 </html>
