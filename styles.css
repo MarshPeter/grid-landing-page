@@ -56,10 +56,15 @@ h1 {
     font-weight: 400;
 }
 
+
 input, button,
 textarea, select {
     font-family: inherit;
     font-size: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 img {
@@ -105,14 +110,30 @@ footer {
 
 .content-wrapper {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 2fr repeat(2, 1fr);
+
+    @media (width > 960px) {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 2fr repeat(2, 1fr);
+    }
+
+    @media (600px <= width <= 960px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 .content-hero {
     grid-row: span 2;
     border: 1px solid var(--clr-primary-400);
     padding: var(--spacing-600);
+
+    @media (min-width: 960px) {
+        grid-column: span 1;
+    }
+
+    @media (600px <= width <= 960px) {
+        grid-column: span 2;
+    }
 }
 
 .hero {
